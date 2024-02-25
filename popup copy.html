@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            width: 300px; /* 设置弹出窗口的宽度 */
+            height: 500px; /* 设置弹出窗口的宽度 */
+        }
+    </style>
+</head>
+<body class="p-4 bg-gray-100">
+    <div class="text-center mb-4">
+        <h1 class="text-lg font-bold text-gray-900">AutoGPTs</h1>
+    </div>
+    
+    <!-- 开关按钮 -->
+    <div class="flex justify-between items-center mb-4">
+        <label for="toggle" class="inline-flex items-center cursor-pointer">
+            <span class="relative">
+                <span class="block w-10 h-6 bg-gray-400 rounded-full shadow-inner"></span>
+                <span id="slider1" class="absolute block w-4 h-4 mt-1 ml-1 rounded-full shadow inset-y-0 left-0 focus-within:shadow-outline transition-transform duration-300 ease-in-out bg-white transform translate-x-0">
+                    <input id="toggle" type="checkbox" class="absolute opacity-0 w-0 h-0" />
+                </span>
+            </span>
+            <span class="ml-3 text-sm font-medium text-gray-900">Auto Allow</span>
+        </label>
+    </div>
+    <div class="flex justify-between items-center mb-4">
+        <label for="toggle_nextstep" class="inline-flex items-center cursor-pointer">
+            <span class="relative">
+                <span class="block w-10 h-6 bg-gray-400 rounded-full shadow-inner"></span>
+                <span id="slider2" class="absolute block w-4 h-4 mt-1 ml-1 rounded-full shadow inset-y-0 left-0 focus-within:shadow-outline transition-transform duration-300 ease-in-out bg-white transform translate-x-0">
+                    <input id="toggle_nextstep" type="checkbox" class="absolute opacity-0 w-0 h-0" />
+                </span>
+            </span>
+            <span class="ml-3 text-sm font-medium text-gray-900">Auto Next Step</span>
+        </label>
+    </div>
+
+    <!-- 描述文本 -->
+    <p class="text-sm text-gray-700 mb-4">
+        这个扩展自动的点击GPTs调用外部action时弹出的Allow对话框按钮，未来还会添加一系列针对GPTs的自动化操作,让GPTs成为真正的agent。
+    </p>
+
+    <!-- 联系方式标题 -->
+    <div class="text-center mb-4">
+        <h5 class="text-lg font-bold text-gray-900">联系方式</h5>
+    </div>
+
+    <!-- 二维码 -->
+    <div class="flex justify-center items-center">
+        <img src="images/wechat.jpg" alt="QR Code" style="width: 300px; height: 300px; object-fit: contain;">
+    </div>
+
+    <!-- GitHub 超链接 -->
+    <div class="text-center">
+        <a href="https://github.com/your-username/your-repository" class="text-blue-500 hover:text-blue-700">访问GitHub源码</a>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
